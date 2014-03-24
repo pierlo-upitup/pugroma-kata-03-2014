@@ -1,0 +1,23 @@
+{
+    "name": "kata name (see you later)",
+    "license": "MIT",
+    "type": "kata",
+    "description": "The repo for the 03/2014 kata on Coding Dojo of PHP User Group of Rome",
+    "autoload": {
+        "psr-4": { "PUGRoma\\": "src/PUGRoma" }
+    },
+    "require": {
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.0.*"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "minimum-stability": "stable",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0"
+        }
+    }
+}
