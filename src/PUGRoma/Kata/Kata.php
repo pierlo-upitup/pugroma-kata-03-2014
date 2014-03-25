@@ -9,6 +9,3 @@ class Kata
         return true;
     }
 }
-
-
-
