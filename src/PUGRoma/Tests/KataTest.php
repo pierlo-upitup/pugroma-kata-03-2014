@@ -19,6 +19,7 @@ class KataTest extends \PHPUnit_Framework_TestCase
 
     public function testItPrintsFrom1To10()
     {
-    	$this->assertTrue(false);
+    	$expected = '1 2 3 4 5 6 7 8 9 10 ';
+    	$this->assertEquals($expected, $this->kata->printRange(1,10));
     }
 }

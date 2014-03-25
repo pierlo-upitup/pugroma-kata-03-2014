@@ -11,10 +11,10 @@ class Kata
 
 	public function printRange($from, $to)
 	{
-		$output = $from;
-		for ($i = $from; $i <= $to; ++$i) 
+		$output = '';
+		for ($i = $from; $i <= $to; $i++) 
 		{
-			$output.= $i."\n";
+			$output.= $i." ";
 		}
 		return $output;
 	}
