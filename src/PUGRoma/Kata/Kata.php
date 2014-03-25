@@ -8,4 +8,14 @@ class Kata
     {
         return true;
     }
+
+	public function printRange($from, $to)
+	{
+		$output = $from;
+		for ($i = $from; $i <= $to; ++$i) 
+		{
+			$output.= $i."\n";
+		}
+		return $output;
+	}
 }

@@ -6,7 +6,7 @@ class KataTest extends \PHPUnit_Framework_TestCase
 {
 	private $kata;
 
-	public funcion setUp()
+	public function setUp()
 	{
 		$this->kata = new Kata();
 	}
@@ -17,8 +17,8 @@ class KataTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue($this->kata->isReady());
     }
 
-    public function test_it_prints_from_1_to_100()
+    public function testItPrintsFrom1To10()
     {
-    	return false;
+    	$this->assertTrue(false);
     }
 }
