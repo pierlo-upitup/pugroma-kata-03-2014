@@ -6,12 +6,15 @@ class Kata
 {
 	private $from;
 	private $to;
+	private $formatter;
 
 	public function __construct($from, $to) 
 	{
 		// TODO add checks
 		$this->from = $from;
 		$this->to = $to;
+
+		$this->formatter = new NumberFormatter();
 	}
 
     public function isReady()
@@ -24,20 +27,8 @@ class Kata
 		$output = '';
 		for ($i = $this->from; $i <= $this->to; $i++) 
 		{
-			if ($i % 3 == 0 || $i % 5 == 0) {
-				if ($i % 3 == 0) {
-					$output.= 'Fizz';
-				} 
-				if ($i % 5 == 0) {
-					$output.= 'Buzz';	
-				}
-				if ($i % 3 == 0 && $i % 5 == 0) {
-					$output.= '?';
-				}
-			} else {
-				$output.= $i;
-			}
-			$output.= ' ';
+			
+			$output.= $this->formatter->formatNumber($i);
 		}
 
 		return $output;
