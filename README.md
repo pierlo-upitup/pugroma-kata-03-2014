@@ -1,3 +1,10 @@
+**Context**
+
+You're a dev and you have to join on a new project, called Kata.<br/>
+The code base of the project is already in a repo.<br/>
+So, first you must get the code and run the tests to be sure you're up.<br/>
+
+
 **Setup**
 
 - fork the repo
