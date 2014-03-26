@@ -4,33 +4,30 @@ namespace PUGRoma\Kata;
 
 class Kata
 {
-	private $from;
-	private $to;
-	private $formatter;
 
-	public function __construct($from, $to) 
+	public function __construct() 
 	{
-		// TODO add checks
-		$this->from = $from;
-		$this->to = $to;
-
-		$this->formatter = new NumberFormatter();
+		$this->fizzBuzz = new FizzBuzz(3,5,15);
 	}
 
-    public function isReady()
-    {
-        return true;
-    }
-
-	public function printRange()
+	public function printFizzBuzzRange($from, $to) 
 	{
 		$output = '';
-		for ($i = $this->from; $i <= $this->to; $i++) 
+		for ($i = (int)$from; $i <= (int)$to; $i++) 
 		{
-			
-			$output.= $this->formatter->formatNumber($i);
+			if ($this->fizzBuzz->isFizz($i) || $this->fizzBuzz->isBuzz($i)) 
+			{
+				if ($this->fizzBuzz->isFizzBuzz($i)) 
+				{
+					$output.= 'FizzBuzz? ';
+					continue;
+				}
+				$output.= $this->fizzBuzz->isFizz($i) ? 'Fizz ' : 'Buzz ';
+				continue;
+			}
+			$output.= $i.' ';
+			continue;
 		}
-
 		return $output;
 	}
 }

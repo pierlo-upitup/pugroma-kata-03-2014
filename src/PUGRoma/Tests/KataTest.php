@@ -5,30 +5,38 @@ namespace PUGRoma\Kata;
 class KataTest extends \PHPUnit_Framework_TestCase
 {
 
-    public function testStart()
+    public function setUp() 
     {
-    	$kata = new Kata(1,1);
-        $this->assertTrue($kata->isReady());
+        $this->kata = new Kata();
     }
 
-    public function testItPrintsFrom1To10()
+    public function test_it_returns_fizz_for_multiples_of_3()
     {
-    	$kata = new Kata(1,10);
-    	$expected = '1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz ';
-    	$this->assertEquals($expected, $kata->printRange());
+        $fizzBuzz = new FizzBuzz(3,5,15);
+        $this->assertEquals(true, $fizzBuzz->isFizz(3));
+        $this->assertEquals(true, $fizzBuzz->isFizz(6));
+        $this->assertEquals(false, $fizzBuzz->isFizz(7));
     }
 
-    public function testItPrintsFrom1To15()
+    public function test_it_returns_buzz_for_mutliples_of_5()
     {
-    	$kata = new Kata(1,15);
-    	$expected = '1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz? ';
-    	$this->assertEquals($expected, $kata->printRange());
+        $fizzBuzz = new FizzBuzz(3,5,15);
+        $this->assertEquals(true, $fizzBuzz->isBuzz(5));
+        $this->assertEquals(true, $fizzBuzz->isBuzz(10));
+        $this->assertEquals(false, $fizzBuzz->isBuzz(13));
     }
 
-    public function testItPrintsFrom1To100()
+    public function test_it_returns_fizzbuzz_for_mutliples_of_15()
     {
-        $kata = new Kata(1,100);
-        $expected = '1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz? 16 17 Fizz 19 Buzz Fizz 22 23 Fizz Buzz 26 Fizz 28 29 FizzBuzz? 31 32 Fizz 34 Buzz Fizz 37 38 Fizz Buzz 41 Fizz 43 44 FizzBuzz? 46 47 Fizz 49 Buzz Fizz 52 53 Fizz Buzz 56 Fizz 58 59 FizzBuzz? 61 62 Fizz 64 Buzz Fizz 67 68 Fizz Buzz 71 Fizz 73 74 FizzBuzz? 76 77 Fizz 79 Buzz Fizz 82 83 Fizz Buzz 86 Fizz 88 89 FizzBuzz? 91 92 Fizz 94 Buzz Fizz 97 98 Fizz Buzz ';
-        $this->assertEquals($expected, $kata->printRange());
+        $fizzBuzz = new FizzBuzz(3,5,15);
+        $this->assertEquals(true, $fizzBuzz->isFizzBuzz(15));
+        $this->assertEquals(true, $fizzBuzz->isFizzBuzz(30));
+        $this->assertEquals(false, $fizzBuzz->isFizzBuzz(13));
+    }
+
+    public function test_it_prints()
+    {
+        $expected = '1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz? ';
+        $this->assertEquals($expected, $this->kata->printFizzBuzzRange(1, 15));
     }
 }
