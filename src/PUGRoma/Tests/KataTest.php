@@ -36,7 +36,10 @@ class KataTest extends \PHPUnit_Framework_TestCase
 
     public function test_it_prints()
     {
+        // Test it prints Fizz for multiples of 3, Buzz for multiples of 5, FizzBuzz? for multiples of both 3 and 5 
+        // ADDED: check if the number contains the value as "string" (ie 13 is Fizz, 53 is Buzz etc)
         $expected = '1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz Fizz 14 FizzBuzz? 16 17 Fizz 19 Buzz Fizz 22 Fizz Fizz Buzz ';
-        $this->assertEquals($expected, $this->kata->printFizzBuzzRange(1, 15));
+        $this->assertEquals($expected, $this->kata->printFizzBuzzRange(1, 25));
+
     }
 }
