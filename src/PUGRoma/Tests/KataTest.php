@@ -36,7 +36,7 @@ class KataTest extends \PHPUnit_Framework_TestCase
 
     public function test_it_prints()
     {
-        $expected = '1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz Fizz 14 FizzBuzz? ';
+        $expected = '1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz Fizz 14 FizzBuzz? 16 17 Fizz 19 Buzz Fizz 22 Fizz Fizz Buzz ';
         $this->assertEquals($expected, $this->kata->printFizzBuzzRange(1, 15));
     }
 }
