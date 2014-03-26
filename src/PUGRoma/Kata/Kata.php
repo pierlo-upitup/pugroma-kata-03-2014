@@ -7,7 +7,7 @@ class Kata
 
 	public function __construct() 
 	{
-		$this->fizzBuzz = new FizzBuzz(3,5,15);
+		$this->fizzBuzz = new \PUGRoma\Kata\FizzBuzz(3,5,15);
 	}
 
 	public function printFizzBuzzRange($from, $to) 
