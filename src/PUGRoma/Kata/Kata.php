@@ -13,20 +13,16 @@ class Kata
 	public function printFizzBuzzRange($from, $to) 
 	{
 		$output = '';
-		for ($i = (int)$from; $i <= (int)$to; $i++) 
-		{
-			if ($this->fizzBuzz->isFizz($i) || $this->fizzBuzz->isBuzz($i)) 
-			{
-				if ($this->fizzBuzz->isFizzBuzz($i)) 
-				{
-					$output.= 'FizzBuzz? ';
-					continue;
-				}
-				$output.= $this->fizzBuzz->isFizz($i) ? 'Fizz ' : 'Buzz ';
+		foreach($steps = range($from, $to) as $i) {
+			if ( ! $this->fizzBuzz->isFizz($i) && ! $this->fizzBuzz->isBuzz($i)) {
+				$output.= $i.' ';
+				continue;		
+			}
+			if ($this->fizzBuzz->isFizzBuzz($i) ) {
+				$output.= 'FizzBuzz? ';
 				continue;
 			}
-			$output.= $i.' ';
-			continue;
+			$output.= $this->fizzBuzz->isFizz($i) ? 'Fizz ' : 'Buzz ';
 		}
 		return $output;
 	}
