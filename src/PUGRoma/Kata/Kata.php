@@ -1,17 +1,12 @@
-<?php
+<?php namespace PUGRoma\Kata;
 
-namespace PUGRoma\Kata;
+class Kata {
 
-class Kata
-{
-
-	public function __construct() 
-	{
+	public function __construct() {
 		$this->fizzBuzz = new FizzBuzz(3,5,15);
 	}
 
-	public function printFizzBuzzRange($from, $to) 
-	{
+	public function printFizzBuzzRange($from, $to) {
 		$output = '';
 		foreach($steps = range($from, $to) as $i) {
 			if ( ! $this->fizzBuzz->isFizz($i) && ! $this->fizzBuzz->isBuzz($i)) {
