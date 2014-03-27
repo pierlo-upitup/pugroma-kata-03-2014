@@ -5,7 +5,7 @@ class KataTest extends PHPUnit_Framework_TestCase
 
     public function setUp() 
     {
-        $this->kata = new PUGRoma\Kata\Kata();
+        $this->kata = new \PUGRoma\Kata\Kata();
     }
 
     public function test_it_returns_fizz_for_multiples_of_3()
