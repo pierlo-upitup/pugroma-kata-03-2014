@@ -1,8 +1,9 @@
 <?php
 
-namespace PUGRoma\Kata;
+use PUGRoma\Kata\Kata;
+use PUGRoma\Kata\FizzBuzz;
 
-class KataTest extends \PHPUnit_Framework_TestCase
+class KataTest extends PHPUnit_Framework_TestCase
 {
 
     public function setUp() 
