@@ -4,7 +4,7 @@
     "type": "kata",
     "description": "The repo for the 03/2014 kata on Coding Dojo of PHP User Group of Rome",
     "autoload": {
-        "psr-0": { "PUGRoma\\Kata": "src/PUGRoma/Kata" }
+        "psr-0": { "PUGRoma\\Kata": "src/" }
     },
     "require": {
     },
