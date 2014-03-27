@@ -2,7 +2,8 @@
 
 class KataTest extends PHPUnit_Framework_TestCase
 {
-
+    private $kata;
+    
     public function setUp() {
         $this->kata = new PUGRoma\Kata\Kata();
     }

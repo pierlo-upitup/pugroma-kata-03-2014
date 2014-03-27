@@ -14,14 +14,6 @@
         "psr-0": {
             "PUGRoma\\Kata": "src/"
         }
-    },
-    "config": {
-        "bin-dir": "bin"
-    },
-    "minimum-stability": "stable",
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.0"
-        }
-    }
+    },   
+    "minimum-stability": "stable"   
 }
